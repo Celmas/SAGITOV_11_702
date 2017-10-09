@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int a,n;
         ArrayList array = new ArrayList();
-        ArrayList.menu();
+        array.menu();
         a = scanner.nextInt();
         if (a!=1 && a!=6){
             System.out.println("Ты не создал массив!");
@@ -22,7 +22,7 @@ public class Main {
         }
         array.count=n-1;
         while(true){
-            ArrayList.menu();
+            array.menu();
             a = scanner.nextInt();
             if (a == 2){
                 if (array.count+1==n) {

@@ -3,8 +3,8 @@ package ru.itis;
 import java.util.Scanner;
 
 public class ArrayList {
-    public static int count;
-    public static void menu(){
+    public int count;
+    void menu(){
         System.out.println("Меню");
         System.out.println("1. Создать массив");
         System.out.println("2. Добавить число в конец массива");
@@ -13,7 +13,7 @@ public class ArrayList {
         System.out.println("5. Вывести массив");
         System.out.println("6. Выход");
     }
-    public static void addNum(int array[],int x){
+    void addNum(int array[],int x){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введи число");
         int num = scanner.nextInt();
