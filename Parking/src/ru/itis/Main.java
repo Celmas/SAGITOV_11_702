@@ -13,8 +13,8 @@ public class Main {
 
         Car car1 = new Car("bugatti veyron", "x123yk", underground);
         Car car2 = new Car("BMW x3", "x010ax", carbon);
-        Car car3 = new Car("toyota rav4", "x888aa", mostWanted);
-        Car car4 = new Car("range rover velar", "x888aa",  carbon);
+        Car car3 = new Car("toyota rav4", "x888aa", underground);
+        Car car4 = new Car("range rover velar", "x888aa",  mostWanted);
         Car car5 = new Car("lada priora", "o001oo", underground);
 
         car1.parking();
@@ -22,6 +22,8 @@ public class Main {
         car3.parking();
         car4.parking();
         car1.leave();
-        car5.leave();
+        car2.leave();
+        car5.parking();
+
     }
 }
