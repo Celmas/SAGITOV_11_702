@@ -13,6 +13,7 @@ public class Main {
                 .serial(15102017)
                 .service(2.5)
                 .build();
+        tv.createArrayOfChannels(10); // Setting number of channels
         Channel channel1 = new Channel("Первый канал", 4);
         channel1.addProgram("Доброе утро", LocalTime.parse("06:00:00"), LocalTime.parse("12:00:00"));
         channel1.addProgram("Давай поженимся", LocalTime.parse("12:00:00"), LocalTime.parse("15:00:00"));
@@ -37,10 +38,10 @@ public class Main {
         channel5.addProgram("Реальные пацаны", LocalTime.parse("06:00:00"), LocalTime.parse("12:00:00"));
         channel5.addProgram("Comedy Club", LocalTime.parse("12:00:00"), LocalTime.parse("15:00:00"));
         channel5.addProgram("СашаТаня", LocalTime.parse("15:00:00"), LocalTime.parse("21:00:00"));
-        channel5.addProgram("Дом 2", LocalTime.parse("21:00:00"), LocalTime.parse("06:00:00"));
+        channel5.addProgram("Дом 2", LocalTime.parse("21:00:00"), LocalTime.parse("24:00:00"));
 
-        c1.change(channel1);
-        c1.change(channel3);
-        c1.change(channel4);
+        c1.change("ТНТ");
+        c1.change("РенТВ");
+        c1.change("СТС");
     }
 }

@@ -4,6 +4,17 @@ import java.time.LocalTime;
 
 public class TV {
     private static final TV instance;
+    public Channel[] channels;
+    private int i = 0;
+
+    void createArrayOfChannels(int n){
+        channels = new Channel[n];
+    }
+
+    void addChannels(Channel channel){
+            channels[i] = channel;
+            i++;
+    }
 
     void onTV(Program[] programs, int n){
         for (int i = 0; i < n; i++){

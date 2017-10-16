@@ -5,11 +5,13 @@ import java.time.LocalTime;
 public class Channel {
     private String name;
     private int n;
+    TV tv = TV.getInstance();
     private Program[] programs;
     Channel(String name, int n){
         this.name = name;
         this.n = n;
         this.programs = new Program[n];
+        tv.addChannels(this);
     }
 
 
@@ -19,11 +21,19 @@ public class Channel {
         i++;
     }
 
-    void change(TV tv){
+    void change(){
         tv.onTV(programs, n);
     }
 
     public void setN(int n) {
         this.n = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

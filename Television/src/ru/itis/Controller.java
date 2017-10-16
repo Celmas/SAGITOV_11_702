@@ -16,8 +16,13 @@ public class Controller {
         this.service = builder.service;
     }
 
-    void change(Channel channel){
-        channel.change(tv);
+    void change(String s){
+        for (int i = 0; i < tv.channels.length; i++){
+            if (s == tv.channels[i].getName()){
+                tv.channels[i].change();
+                break;
+            }
+        }
     }
 
     public static Builder builder(){
