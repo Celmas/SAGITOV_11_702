@@ -16,8 +16,8 @@ public class Channel {
 
 
     private int i = 0;
-    void addProgram(String name, LocalTime start, LocalTime end){
-        programs[i] = new Program(name, start, end);
+    void addProgram(String name, String start, String end){
+        programs[i] = new Program(name, LocalTime.parse(start), LocalTime.parse(end));
         i++;
     }
 
