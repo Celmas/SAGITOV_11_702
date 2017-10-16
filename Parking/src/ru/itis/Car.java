@@ -3,6 +3,7 @@ package ru.itis;
 public class Car {
     private String model, number;
     private ParkingPlace place;
+    private int i;
 
     Car(String model, String number, ParkingPlace place) {
         this.model = model;
@@ -10,11 +11,11 @@ public class Car {
         this.place = place;
     }
 
-    void parking(Car x){
-        place.enterCar(x);
+    void parking(){
+        place.enterCar(this);
     }
-    void leave(Car x){
-        place.delCar(x);
+    void leave(){
+        place.delCar(this);
     }
 
     public String getModel() {
@@ -39,5 +40,13 @@ public class Car {
 
     public void setPlace(ParkingPlace place) {
         this.place = place;
+    }
+
+    public int getI() {
+        return i;
+    }
+
+    public void setI(int i) {
+        this.i = i;
     }
 }
