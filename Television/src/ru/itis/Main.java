@@ -1,7 +1,5 @@
 package ru.itis;
 
-import java.time.LocalTime;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -58,12 +56,12 @@ public class Main {
         channel9.addProgram("Мультфильмы", "06:00:00", "12:00:00");
         channel9.addProgram("Касл", "12:00:00", "15:00:00");
         channel9.addProgram("Менталист", "15:00:00", "21:00:00");
-        channel9.addProgram("Гадалка", "21:00:00", "23:00:00");
+        channel9.addProgram("OxxxymOron vs Dizaster", "21:00:00", "23:00:00");
         Channel channel10 = new Channel("Узнавайка", 4);
         channel10.addProgram("Как сдать экзамен Арсланову?", "06:00:00", "12:00:00");
         channel10.addProgram("Как выжить на дошиках?", "12:00:00", "15:00:00");
         channel10.addProgram("Как стать популярным?", "15:00:00", "21:00:00");
-        channel10.addProgram("Как жвут в армии?", "21:00:00", "23:00:00");
+        channel10.addProgram("Как живут в армии?", "21:00:00", "23:00:00");
 
         c1.change("ТНТ");
         c1.change("РенТВ");

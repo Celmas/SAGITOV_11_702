@@ -3,12 +3,13 @@ package ru.itis;
 import java.time.LocalTime;
 
 public class ParkingPlace {
-    LocalTime beginTime = LocalTime.parse("14:00:00");
+    LocalTime beginTime = LocalTime.parse("11:00:00");
     LocalTime finishTime = LocalTime.parse("23:50:00");
-    private Car[] cars = new Car[10];
+    private Car[] cars;
     private String name;
     private boolean isParked = false;
-    ParkingPlace(){
+    ParkingPlace(int n){
+        cars = new Car[n];
         for (int i = 0; i < cars.length; i++){
             cars[i] = null;
         }

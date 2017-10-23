@@ -29,6 +29,46 @@ public class Controller {
         return new Builder();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSerial() {
+        return serial;
+    }
+
+    public void setSerial(int serial) {
+        this.serial = serial;
+    }
+
+    public String getNameOfCompany() {
+        return nameOfCompany;
+    }
+
+    public void setNameOfCompany(String nameOfCompany) {
+        this.nameOfCompany = nameOfCompany;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public double getService() {
+        return service;
+    }
+
+    public void setService(double service) {
+        this.service = service;
+    }
+
     public static class Builder{
         private String name;
         private int serial;
