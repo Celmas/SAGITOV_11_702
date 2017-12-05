@@ -24,7 +24,31 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        
+        Line[] line = new Line[25];
+        SortedListOfPoints list = new SortedListOfPoints();
+        Scanner scanner = null;
+        int countOfLines = 0;
+        try {
+            scanner = new Scanner(new File("C:\\Users\\Ilnur\\Desktop\\java\\LineWithPoints\\src\\sample\\points.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while (scanner.hasNextInt()) {
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            list.add(new Point(x,y));
+        }
+        int i = 0;
+        while (list.count > 0){
+            line[i] = new Line(list.getArray());
+            line[i].show();
+            i++;
+        }
+/*        list.show();
+        System.out.println(countOfLines);*/
+
+        primaryStage.setScene(new Scene(lineChart, 800, 600));
+        primaryStage.show();
         launch(args);
 
     }
